@@ -1,12 +1,12 @@
 class Champion {
-    constructor(name, aoeUlt, poke, global, shield, hook, cc, trap, revive, stealth, pet, terrain, region, visible){
+    constructor(name, aoeUlt, poke, global, shield, displacement, cc, trap, revive, stealth, pet, terrain, region){
         this.icon = null;
         this.name = name;
         this.aoeUlt = aoeUlt;
         this.poke = poke;
         this.global = global;
         this.shield = shield;
-        this.hook = hook;
+        this.displacement = displacement;
         this.cc = cc;
         this.trap = trap;
         this.revive = revive;
@@ -14,6 +14,5 @@ class Champion {
         this.pet = pet;
         this.terrain = terrain;
         this.region = region;
-        this.visible = visible;
     }
 }

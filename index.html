@@ -4,10 +4,98 @@
         <script src="js/championList.js"></script>
         <script src="js/mainScript.js"></script>
     </head>
+    <style>
+        @font-face {
+            font-family: 'SF Pro Display Bold';
+            src: url('https://fontsfree.net//wp-content/fonts/basic/sans-serif/FontsFree-Net-SFProDisplay-Bold.ttf');
+        }
+
+        @font-face {
+            font-family: 'SF Pro Display';
+            src: url('https://fontsfree.net//wp-content/fonts/basic/sans-serif/FontsFree-Net-SFProDisplay-Regular-1.ttf');
+        }
+
+        body {
+            background-color: #292929;
+        }
+    
+    
+    
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            max-width: 160px;
+        }
+    
+        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .button {
+            background-color: #545454;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            font-family: 'SF Pro Display Bold';
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .dropButton {
+            background-color: white;
+            opacity: 60%;
+            border: none;
+            border-radius: 20px;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 10px;
+            font-family: 'SF Pro Display';
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
     <body>
         <p id="1"></p>
-        <form>
-        <input type="button" value="CC" onclick="CC()"/>
-        </form>
+        <div class="buttons">
+            <button type="button" class="button" id="aoeUlt" onclick="aoeUlt()">AOE Ult</button>
+            <button type="button" class="button" id="poke" onclick="poke()">Poke</button>
+            <button type="button" class="button" id="global" onclick="global()">Global</button>
+            <button type="button" class="button" id="shield" onclick="shield()">Shield</button>
+            <button type="button" class="button" id="hook" onclick="hook()">Hook</button>
+            <button type="button" class="button" id="cc" onclick="cc()">CC</button>
+            <button type="button" class="button" id="trap" onclick="trap()">Trap</button>
+            <button type="button" class="button" id="revive" onclick="revive()">Revive</button>
+            <button type="button" class="button" id="stealth" onclick="stealth()">Stealth</button>
+            <button type="button" class="button" id="pet" onclick="pet()">Pet</button>
+            <button type="button" class="button" id="terrain" onclick="terrain()">Terrain</button>
+            <div class="dropdown">
+                <button class="button" id="region">Region</button>
+                <div class="dropdown-content">
+                    <button type="button" class="dropButton" id="regionBandleCity" onclick="region('Bandle City')">Bandle City</button>
+                    <button type="button" class="dropButton" id="regionBilgewater" onclick="region('Bligewater')">Bilgewater</button>
+                    <button type="button" class="dropButton" id="regionDemacia" onclick="region('Demacia')">Demacia</button>
+                    <button type="button" class="dropButton" id="regionFreljord" onclick="region('Freljord')">Freljord</button>
+                    <button type="button" class="dropButton" id="regionIonia" onclick="region('Ionia')">Ionia</button>
+                    <button type="button" class="dropButton" id="regionIxtal" onclick="region('Ixtal')">Ixtal</button>
+                    <button type="button" class="dropButton" id="regionNoxus" onclick="region('Noxus')">Noxus</button>
+                    <button type="button" class="dropButton" id="regionPiltover" onclick="region('Piltover')">Piltover</button>
+                    <button type="button" class="dropButton" id="regionShadowIsles" onclick="region('Shadow Isles')">Shadow Isles</button>
+                    <button type="button" class="dropButton" id="regionShurima" onclick="region('Shurima')">Shurima</button>
+                    <button type="button" class="dropButton" id="regionTargon" onclick="region('Targon')">Targon</button>
+                    <button type="button" class="dropButton" id="regionVoid" onclick="region('Void')">Void</button>
+                    <button type="button" class="dropButton" id="regionZaun" onclick="region('Zaun')">Zaun</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
