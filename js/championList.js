@@ -1,4 +1,4 @@
-var list = [];
+list = [];
 const Aatrox = new Champion("Aatrox", false, false, false, false, false, true, false, false, false, false, false, "null", false);
 const Ahri = new Champion("Ahri", false, false, false, false, false, false, false, false, false, false, false, "Ionia", false);
 const Akali = new Champion("Akali", false, false, false, false, false, true, false, false, false, false, false, "null", false);
@@ -183,7 +183,7 @@ list.push(Cho_Gath);
 list.push(Corki);
 list.push(Darius);
 list.push(Diana);
-list.push(Dr. Mundo);
+list.push(Dr_Mundo);
 list.push(Draven);
 list.push(Ekko);
 list.push(Elise);
