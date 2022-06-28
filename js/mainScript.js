@@ -122,17 +122,6 @@ function flipRegCss(drpBtnId) {
     }
 }
 
-// function lightUp(btn) {
-//     btn.style.background = "rgba(255, 255, 255, 0.614)";
-//     btn.style.color = "rgba(255, 255, 255, 0.9)";
-// }
-
-// function lightUpReg(btn) {
-//     btn.style.background = "rgba(255, 255, 255, 0.614)";
-//     btn.style.color = "rgba(0, 0, 0, 0.8)";
-//     btn.style.boxshadow = "-3px -3px 5px rgba(255, 255, 255, 0.03), 3px 3px 5px rgba(0, 0, 0, 0.12)";
-// }
-
 function display() {
     var string = "";
     currentList.forEach(champion => string = string + champion.name + "\n");
