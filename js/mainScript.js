@@ -13,6 +13,8 @@ function setup() {
 
 function flip(btnId) {
     flipCss(btnId);
+    filter();
+    refresh();
 }
 
 function flipCss(btnId) {
@@ -90,6 +92,8 @@ function flipCss(btnId) {
 
 function flipReg(drpBtnId) {
     flipRegCss(drpBtnId);
+    filterReg();
+    refresh();
 }
 
 function flipRegCss(drpBtnId) {
@@ -122,20 +126,54 @@ function flipRegCss(drpBtnId) {
     }
 }
 
-function display() {
-    var string = "";
-    currentList.forEach(champion => string = string + champion.name + "\n");
-    document.getElementById("1").textContent = string;
+function refresh() {
+    deleteAll();
+    var listElement = document.getElementById("list");
+    currentList.forEach(champion => {
+        createChampionCard(champion, listElement);
+    });
 }
 
-function CC() {
-    currentList = [];
-    list.forEach(champion => {if(champion.cc) {
-        currentList.push(champion);
-    }});
-    var string = "";
-    currentList.forEach(champion => string = string + champion.name + "\n");
-    document.getElementById("1").textContent = string;
+function createChampionCard(champion, listElement) {
+    var template = document.createElement('div');
+    template.innerHTML = champion.name;
+    listElement.appendChild(template);
+}
+
+function filter() {
+    currentList = [...list];
+    buttonMap.forEach((value, key) => {
+        if (value) {
+            currentList.forEach(champion => {
+                var code = 'champion.' + key;
+                var boolean = eval(code);
+                if (!boolean) {
+                    currentList = currentList.filter(word => word.name != champion.name);
+                }
+            })
+        }
+    })
+}
+
+function filterReg() {
+    currentList = [...list];
+    buttonRegionMap.forEach((value, key) => {
+        if (value) {
+            currentList.forEach(champion => {
+                currentList = currentList.filter(word => word.region == key);
+            })
+        }
+    })
+}
+
+function deleteAll() {
+    var e = document.getElementById('list');
+    var first = e.firstElementChild;
+    while (first) {
+        first.remove();
+        first = e.firstElementChild;
+    }
 }
 
 setup();
+refresh();

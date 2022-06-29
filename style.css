@@ -23,14 +23,12 @@ body {
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0);
     border-radius: 10px;
-    height: 80%;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3); 
     border-radius: 10px;
-    height: 80%;
 }
 
 /* Handle on hover */
@@ -41,12 +39,12 @@ body {
 
 ::-webkit-scrollbar-track-piece:end {
     background: transparent;
-    margin-bottom: 5px; 
+    margin-bottom: 6px; 
 }
 
 ::-webkit-scrollbar-track-piece:start {
     background: transparent;
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 .list {
@@ -64,7 +62,13 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: 1;
+    font-family: 'SF Pro Display';
+    font-size: 20px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 20px;
 }
+
 .panel {
     width: 820px;
     height: 80%;
@@ -115,8 +119,17 @@ body {
     max-width: 160px;
 }
 
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation-name: dropdownIn;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes dropdownIn {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
 
 .button {
     background:rgba(0, 0, 0, 0.075);
@@ -165,13 +178,19 @@ body {
 }
 
 .dropButton:hover {
-    /* background-color: rgba(255, 255, 255, 0.614); */
+    animation: dropbutton;
+    animation-duration: 0.15s;
+    animation-timing-function: ease-in;
     box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.03), 3px 3px 5px rgba(0, 0, 0, 0.12);
     color: rgba(0, 0, 0, 0.8);
 }
 
+@keyframes dropbutton {
+    from {box-shadow: none; color: rgba(0, 0, 0, 0.5);}
+    to {box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.03), 3px 3px 5px rgba(0, 0, 0, 0.12); color: rgba(0, 0, 0, 0.8);}
+}
+
 .button:hover {
-    /* background-color: rgba(255, 255, 255, 0.614); */
     color: rgba(255, 255, 255, 0.9);
 }
 

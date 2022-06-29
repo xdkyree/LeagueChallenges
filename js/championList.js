@@ -1,7 +1,7 @@
 list = [];
-const Aatrox = new Champion("Aatrox", false, false, false, false, false, true, false, false, false, false, false, "null");
-const Ahri = new Champion("Ahri", false, false, false, false, false, false, false, false, false, false, false, "Ionia");
-const Akali = new Champion("Akali", false, false, false, false, false, true, false, false, false, false, false, "null");
+const Aatrox = new Champion("Aatrox", true, false, false, false, false, true, false, false, false, false, false, "null");
+const Ahri = new Champion("Ahri", true, true, false, false, false, false, false, false, false, false, false, "ionia");
+const Akali = new Champion("Akali", true, true, false, false, false, true, false, false, false, false, false, "null");
 const Akshan = new Champion("Akshan", false, false, false, false, false, true, false, false, false, false, false, "null");
 const Alistar = new Champion("Alistar", false, false, false, false, false, true, false, false, false, false, false, "null");
 const Amumu = new Champion("Amumu", false, false, false, false, false, true, false, false, false, false, false, "null");
