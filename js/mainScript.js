@@ -92,7 +92,7 @@ function flipCss(btnId) {
 
 function flipReg(drpBtnId) {
     flipRegCss(drpBtnId);
-    filterReg();
+    filter();
     refresh();
 }
 
@@ -135,9 +135,53 @@ function refresh() {
 }
 
 function createChampionCard(champion, listElement) {
-    var template = document.createElement('div');
-    template.innerHTML = champion.name;
+    var template = document.createElement('button');
+    template.classList.add('champion');
     listElement.appendChild(template);
+    var crop = document.createElement('div');
+    crop.classList.add('crop');
+    template.appendChild(crop);
+    var image = document.createElement('img');
+    image.setAttribute('src', champion.iconPath);
+    crop.appendChild(image);
+    var text = document.createElement('div');
+    text.classList.add('text');
+    text.innerHTML = champion.name;
+    if (champion.aoeUlt) {
+        text.innerHTML += '\u2001 \u2001 \u2001AOE Ult';
+    }
+    if (champion.poke) {
+        text.innerHTML += '\u2001 \u2001 \u2001Poke';
+    }
+    if (champion.global) {
+        text.innerHTML += '\u2001 \u2001 \u2001Global';
+    }
+    if (champion.shield) {
+        text.innerHTML += '\u2001 \u2001 \u2001Shield';
+    }
+    if (champion.displacement) {
+        text.innerHTML += '\u2001 \u2001 \u2001Hook';
+    }
+    if (champion.cc) {
+        text.innerHTML += '\u2001 \u2001 \u2001CC';
+    }
+    if (champion.trap) {
+        text.innerHTML += '\u2001 \u2001 \u2001Trap';
+    }
+    if (champion.revive) {
+        text.innerHTML += '\u2001 \u2001 \u2001Revive';
+    }
+    if (champion.stealth) {
+        text.innerHTML += '\u2001 \u2001 \u2001Stealth';
+    }
+    if (champion.pet) {
+        text.innerHTML += '\u2001 \u2001 \u2001Pet';
+    }
+    if (champion.terrain) {
+        text.innerHTML += '\u2001 \u2001 \u2001Terrain';
+    }
+    text.innerHTML += '\u2001 \u2001 \u2001' + champion.region;
+    template.appendChild(text);
 }
 
 function filter() {
@@ -153,10 +197,6 @@ function filter() {
             })
         }
     })
-}
-
-function filterReg() {
-    currentList = [...list];
     buttonRegionMap.forEach((value, key) => {
         if (value) {
             currentList.forEach(champion => {

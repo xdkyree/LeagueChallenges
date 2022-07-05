@@ -1,5 +1,5 @@
 class Champion {
-    constructor(name, aoeUlt, poke, global, shield, displacement, cc, trap, revive, stealth, pet, terrain, region){
+    constructor(name, aoeUlt, poke, global, shield, displacement, cc, trap, revive, stealth, pet, terrain, region, iconPath){
         this.icon = null;
         this.name = name;
         this.aoeUlt = aoeUlt;
@@ -14,5 +14,6 @@ class Champion {
         this.pet = pet;
         this.terrain = terrain;
         this.region = region;
+        this.iconPath = iconPath;
     }
 }
