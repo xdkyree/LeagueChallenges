@@ -4,11 +4,10 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="background">
-            <video autoplay muted loop id="background">
-                <source src="background.mp4" type="video/mp4">
-            </video>
-        </div>
+        <video playsinline autoplay muted loop poster="poster.png" id="background">
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="buttons">
             <button type="button" class="button" id="aoeUlt" onclick="flip('aoeUlt')">AOE Ult</button>
             <button type="button" class="button" id="poke" onclick="flip('poke')">Poke</button>
@@ -41,8 +40,9 @@
             </div>
         </div>
         <div class="container">
-            <div class="list" id="list"></div>
-            <div class="panel"></div>
+            <div class="panel">
+                <div class="list" id="list"></div>
+            </div>
             <div class="diagram"></div>
         </div>
     </body>

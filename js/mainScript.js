@@ -85,8 +85,8 @@ function flipCss(btnId) {
         btn.style.color = "white";
     }
     else {
-        btn.style.background = "rgba(0, 0, 0, 0.075)";
-        btn.style.color = "rgba(255, 255, 255, 0.75)";
+        btn.style.background = "";
+        btn.style.color = "";
         }
 }
 
@@ -118,10 +118,10 @@ function flipRegCss(drpBtnId) {
         buttonRegionMap.set(drpBtnId, true);
     }
     else {
-        btn.style.background = "rgba(0, 0, 0, 0.075)";
-        btn.style.color = "rgba(255, 255, 255, 0.75)";
-        drpBtn.style.background = "rgba(0, 0, 0, 0)";
-        drpBtn.style.color = "rgba(0, 0, 0, 0.5)";
+        btn.style.background = "";
+        btn.style.color = "";
+        drpBtn.style.background = "";
+        drpBtn.style.color = "";
         buttonRegionMap.set(drpBtnId, false);
     }
 }
@@ -135,18 +135,27 @@ function refresh() {
 }
 
 function createChampionCard(champion, listElement) {
+
     var template = document.createElement('button');
     template.classList.add('champion');
     listElement.appendChild(template);
+
     var crop = document.createElement('div');
     crop.classList.add('crop');
     template.appendChild(crop);
+
     var image = document.createElement('img');
     image.setAttribute('src', champion.iconPath);
     crop.appendChild(image);
+
+    var name = document.createElement('div');
+    name.classList.add('name');
+    name.innerHTML = '\u2001' + champion.name;
+    template.appendChild(name);
+
     var text = document.createElement('div');
     text.classList.add('text');
-    text.innerHTML = champion.name;
+
     if (champion.aoeUlt) {
         text.innerHTML += '\u2001 \u2001 \u2001AOE Ult';
     }
