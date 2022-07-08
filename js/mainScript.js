@@ -189,7 +189,9 @@ function createChampionCard(champion, listElement) {
     if (champion.terrain) {
         text.innerHTML += '\u2001 \u2001 \u2001Terrain';
     }
-    text.innerHTML += '\u2001 \u2001 \u2001' + champion.region;
+    champion.region.forEach( region => {
+        text.innerHTML += '\u2001 \u2001 \u2001' + region;
+    })
     template.appendChild(text);
 }
 
