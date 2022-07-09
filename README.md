@@ -8,7 +8,7 @@ This is a website for creating a League of Legends team composition to maximize 
 - diagram showing challenges done with a specific team composition
 ## Further developement
 
-You can also contribute to this project!Any ideas submitted to me on social media linked on the site will be reviewed and placed under *Currently working on*.
+You can also contribute to this project! Any ideas submitted to me on social media linked on the site will be reviewed and placed under *Currently working on*.
 ## Authors
 
 - [@xdkyree](https://github.com/xdkyree)
