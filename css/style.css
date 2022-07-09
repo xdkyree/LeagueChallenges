@@ -325,7 +325,21 @@ html {
 	position: absolute;
 	opacity: 60%;
 	bottom: 10px;
+	transform: translateY(3px);
+	transition-timing-function: ease-out;
+	transition-duration: 0.2s;
 }
+
+#dc:hover,
+#git:hover,
+#red:hover {
+	opacity: 100%;
+	transform: translateY(-3px);
+	transition-timing-function: ease-out;
+	transition-duration: 0.2s;
+}
+
+
 
 #red {
 	right: 10px;
