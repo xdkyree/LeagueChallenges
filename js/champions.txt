@@ -1,1 +1,0 @@
-{"icon":null,"name":"Aatrox","aoeUlt":false,"poke":false,"global":false,"shield":false,"hook":false,"cc":true,"trap":false,"revive":false,"stealth":false,"pet":false,"terrain":false,"region":"null","visible":false}

@@ -157,40 +157,40 @@ function createChampionCard(champion, listElement) {
     text.classList.add('text');
 
     if (champion.aoeUlt) {
-        text.innerHTML += '\u2001 \u2001 \u2001AOE Ult';
+        text.innerHTML += 'AOE ';
     }
     if (champion.poke) {
-        text.innerHTML += '\u2001 \u2001 \u2001Poke';
+        text.innerHTML += 'Poke ';
     }
     if (champion.global) {
-        text.innerHTML += '\u2001 \u2001 \u2001Global';
+        text.innerHTML += 'Global ';
     }
     if (champion.shield) {
-        text.innerHTML += '\u2001 \u2001 \u2001Shield';
+        text.innerHTML += 'Shield ';
     }
     if (champion.displacement) {
-        text.innerHTML += '\u2001 \u2001 \u2001Hook';
+        text.innerHTML += 'Hook ';
     }
     if (champion.cc) {
-        text.innerHTML += '\u2001 \u2001 \u2001CC';
+        text.innerHTML += 'CC ';
     }
     if (champion.trap) {
-        text.innerHTML += '\u2001 \u2001 \u2001Trap';
+        text.innerHTML += 'Trap ';
     }
     if (champion.revive) {
-        text.innerHTML += '\u2001 \u2001 \u2001Revive';
+        text.innerHTML += 'Revive ';
     }
     if (champion.stealth) {
-        text.innerHTML += '\u2001 \u2001 \u2001Stealth';
+        text.innerHTML += 'Stealth ';
     }
     if (champion.pet) {
-        text.innerHTML += '\u2001 \u2001 \u2001Pet';
+        text.innerHTML += 'Pet ';
     }
     if (champion.terrain) {
-        text.innerHTML += '\u2001 \u2001 \u2001Terrain';
+        text.innerHTML += 'Terrain ';
     }
     champion.region.forEach( region => {
-        text.innerHTML += '\u2001 \u2001 \u2001' + region;
+        text.innerHTML += region.charAt(0).toUpperCase() + region.slice(1) + ' ';
     })
     template.appendChild(text);
 }
@@ -211,7 +211,7 @@ function filter() {
     buttonRegionMap.forEach((value, key) => {
         if (value) {
             currentList.forEach(champion => {
-                currentList = currentList.filter(word => word.region == key);
+                currentList = currentList.filter(word => word.region.includes(key));
             })
         }
     })

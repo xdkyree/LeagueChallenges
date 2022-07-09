@@ -1,52 +1,69 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
     <title>League Challenges</title>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <video playsinline autoplay muted loop poster="poster.png" id="background">
-            <source src="background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="buttons">
-            <button type="button" class="button" id="aoeUlt" onclick="flip('aoeUlt')">AOE Ult</button>
-            <button type="button" class="button" id="poke" onclick="flip('poke')">Poke</button>
-            <button type="button" class="button" id="global" onclick="flip('global')">Global</button>
-            <button type="button" class="button" id="shield" onclick="flip('shield')">Shield</button>
-            <button type="button" class="button" id="hook" onclick="flip('hook')">Hook</button>
-            <button type="button" class="button" id="cc" onclick="flip('cc')">CC</button>
-            <button type="button" class="button" id="trap" onclick="flip('trap')">Trap</button>
-            <button type="button" class="button" id="revive" onclick="flip('revive')">Revive</button>
-            <button type="button" class="button" id="stealth" onclick="flip('stealth')">Stealth</button>
-            <button type="button" class="button" id="pet" onclick="flip('pet')">Pet</button>
-            <button type="button" class="button" id="terrain" onclick="flip('terrain')">Terrain</button>
-            <div class="dropdown">
-                <button class="button" id="region">Region</button>
-                <div class="dropdown-content">
-                    <button type="button" class="dropButton" id="bandleCity" onclick="flipReg('bandleCity')">Bandle City</button>
-                    <button type="button" class="dropButton" id="bilgewater" onclick="flipReg('bilgewater')">Bilgewater</button>
-                    <button type="button" class="dropButton" id="demacia" onclick="flipReg('demacia')">Demacia</button>
-                    <button type="button" class="dropButton" id="freljord" onclick="flipReg('freljord')">Freljord</button>
-                    <button type="button" class="dropButton" id="ionia" onclick="flipReg('ionia')">Ionia</button>
-                    <button type="button" class="dropButton" id="ixtal" onclick="flipReg('ixtal')">Ixtal</button>
-                    <button type="button" class="dropButton" id="noxus" onclick="flipReg('noxus')">Noxus</button>
-                    <button type="button" class="dropButton" id="piltover" onclick="flipReg('piltover')">Piltover</button>
-                    <button type="button" class="dropButton" id="shadowIsles" onclick="flipReg('shadowIsles')">Shadow Isles</button>
-                    <button type="button" class="dropButton" id="shurima" onclick="flipReg('shurima')">Shurima</button>
-                    <button type="button" class="dropButton" id="targon" onclick="flipReg('targon')">Targon</button>
-                    <button type="button" class="dropButton" id="void" onclick="flipReg('void')">Void</button>
-                    <button type="button" class="dropButton" id="zaun" onclick="flipReg('zaun')">Zaun</button>
-                </div>
-            </div>
+    <link rel="stylesheet" href="css\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <video playsinline autoplay muted loop poster="resources\poster.png" id="background">
+      <source src="resources\background.mp4" type="video/mp4"> Your browser does not support the video tag.
+    </video>
+    <div class="buttons">
+      <button type="button" class="button" id="aoeUlt" onclick="flip('aoeUlt')">AOE</button>
+      <button type="button" class="button" id="poke" onclick="flip('poke')">Poke</button>
+      <button type="button" class="button" id="global" onclick="flip('global')">Global</button>
+      <button type="button" class="button" id="shield" onclick="flip('shield')">Shield</button>
+      <button type="button" class="button" id="hook" onclick="flip('hook')">Hook</button>
+      <button type="button" class="button" id="cc" onclick="flip('cc')">CC</button>
+      <button type="button" class="button" id="trap" onclick="flip('trap')">Trap</button>
+      <button type="button" class="button" id="revive" onclick="flip('revive')">Revive</button>
+      <button type="button" class="button" id="stealth" onclick="flip('stealth')">Stealth</button>
+      <button type="button" class="button" id="pet" onclick="flip('pet')">Pet</button>
+      <button type="button" class="button" id="terrain" onclick="flip('terrain')">Terrain</button>
+      <div class="dropdown">
+        <button class="button" id="region">Region</button>
+        <div class="dropdown-content">
+          <button type="button" class="dropButton" id="bandleCity" onclick="flipReg('bandleCity')">Bandle City</button>
+          <button type="button" class="dropButton" id="bilgewater" onclick="flipReg('bilgewater')">Bilgewater</button>
+          <button type="button" class="dropButton" id="demacia" onclick="flipReg('demacia')">Demacia</button>
+          <button type="button" class="dropButton" id="freljord" onclick="flipReg('freljord')">Freljord</button>
+          <button type="button" class="dropButton" id="ionia" onclick="flipReg('ionia')">Ionia</button>
+          <button type="button" class="dropButton" id="ixtal" onclick="flipReg('ixtal')">Ixtal</button>
+          <button type="button" class="dropButton" id="noxus" onclick="flipReg('noxus')">Noxus</button>
+          <button type="button" class="dropButton" id="piltover" onclick="flipReg('piltover')">Piltover</button>
+          <button type="button" class="dropButton" id="shadowIsles" onclick="flipReg('shadowIsles')">Shadow Isles</button>
+          <button type="button" class="dropButton" id="shurima" onclick="flipReg('shurima')">Shurima</button>
+          <button type="button" class="dropButton" id="targon" onclick="flipReg('targon')">Targon</button>
+          <button type="button" class="dropButton" id="void" onclick="flipReg('void')">Void</button>
+          <button type="button" class="dropButton" id="zaun" onclick="flipReg('zaun')">Zaun</button>
         </div>
-        <div class="container">
-            <div class="panel">
-                <div class="list" id="list"></div>
-            </div>
-            <div class="diagram"></div>
-        </div>
-    </body>
-    <script src="js/champion.js"></script>
-    <script src="js/championList.js"></script>
-    <script src="js/mainScript.js"></script>
+      </div>
+    </div>
+    <div class="container">
+      <div class="panel">
+        <div class="list" id="list"></div>
+      </div>
+      <div class="diagram"></div>
+    </div>
+    <p>
+      <a href="http://discordapp.com/users/151459144182923275">
+        <img id='dc' src="resources/discordAttribution.png" width="100" height="132">
+      </a>
+    </p>
+    <p>
+      <a href="https://github.com/xdkyree/LeagueChallenges">
+        <img id='git' src="resources/githubAttribution.png" width="100" height="132">
+      </a>
+    </p>
+    <p>
+      <a href="https://www.reddit.com/user/GoodGuyKyree">
+        <img id='red' src="resources/redditAttribution.png" width="100" height="132">
+      </a>
+    </p>
+  </body>
+  <script src="js/champion.js"></script>
+  <script src="js/championList.js"></script>
+  <script src="js/mainScript.js"></script>
 </html>
