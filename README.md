@@ -6,7 +6,6 @@ This is a website for creating a League of Legends team composition to maximize 
 - search bar for champions
 - ability to select champions to design your team composition
 - diagram showing challenges done with a specific team composition
-- add toggle for animated background
 ## Further developement
 
 You can also contribute to this project! Any ideas submitted to me on social media linked on the site will be reviewed and placed under *Currently working on*.
