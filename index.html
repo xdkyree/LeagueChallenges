@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <video playsinline autoplay muted loop poster="resources\poster.png" id="background">
+    <img src="resources/poster.webp" id="backgroundImage"></img>
+    <video playsinline autoplay muted loop poster="resources\poster.webp" id="background">
       <source src="resources\background.mp4" type="video/mp4"> Your browser does not support the video tag.
     </video>
     <div class="buttons">
@@ -62,6 +63,8 @@
         <img id='red' src="resources/redditAttribution.png" width="100" height="132">
       </a>
     </p>
+    <button type="button" class="button" id="videoToggle" onclick="videoToggle()">
+    <img src="resources/backgroundIcon.png" id="videoToggleIcon"></button>
   </body>
   <script src="js/champion.js"></script>
   <script src="js/championList.js"></script>

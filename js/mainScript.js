@@ -9,6 +9,8 @@ function setup() {
     buttonRegionMap = new Map();
     regionNames = ['bandleCity', 'bilgewater', 'demacia', 'freljord', 'ionia', 'ixtal', 'noxus', 'piltover', 'shadowIsles', 'shurima', 'targon', 'void', 'zaun'];
     regionNames.forEach(region => {buttonRegionMap.set(region, false);})
+
+    videoToggleBoolean = false;
 }
 
 function flip(btnId) {
@@ -224,6 +226,20 @@ function deleteAll() {
         first.remove();
         first = e.firstElementChild;
     }
+}
+
+function videoToggle() {
+    var bg = document.getElementById('background');
+    var btn = document.getElementById('videoToggle');
+    if (videoToggleBoolean) {
+        bg.style.display="block";
+        btn.style.background="";
+    }
+    else {
+        bg.style.display="none";
+        btn.style.background="rgba(255, 255, 255, 0.1)";
+    }
+    videoToggleBoolean = !videoToggleBoolean;
 }
 
 setup();
