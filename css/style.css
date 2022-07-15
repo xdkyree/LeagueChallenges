@@ -185,7 +185,7 @@ html {
 .button:hover {
 	background-color: rgba(255, 255, 255, 0.075);
 	color: rgba(255, 255, 255, 1);
-	transform: translateY(-3px);
+	transform: translateY(-3px) scale(103%);
 	transition-timing-function: ease-out;
 	transition-duration: 0.2s;
 }
@@ -345,7 +345,7 @@ html {
 #git:hover,
 #red:hover {
 	opacity: 100%;
-	transform: translateY(-3px);
+	transform: translateY(-3px) scale(105%);
 	transition-timing-function: ease-out;
 	transition-duration: 0.2s;
 }
