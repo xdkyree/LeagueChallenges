@@ -244,6 +244,7 @@ list.push(Nasus);
 list.push(Nautilus);
 list.push(Neeko);
 list.push(Nidalee);
+list.push(Nilah);
 list.push(Nocturne);
 list.push(Nunu_Willump);
 list.push(Olaf);
