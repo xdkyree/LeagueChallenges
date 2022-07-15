@@ -83,6 +83,7 @@ const Nasus = new Champion("Nasus", false, false, false, false, false, false, fa
 const Nautilus = new Champion("Nautilus", false, false, false, false, true, true, false, false, false, false, false, ["bilgewater"], "icons\\icon (83).png");
 const Neeko = new Champion("Neeko", true, false, false, false, false, true, false, false, true, true, false, ["ixtal"], "icons\\icon (84).png");
 const Nidalee = new Champion("Nidalee", false, true, false, true, false, false, true, false, false, false, false, ["ixtal"], "icons\\icon (85).png");
+const Nilah = new Champion("Nilah", false, false, false, false, false, false, false, false, false, false, false, ["bilgewater"], "icons\\icon (161).png");
 const Nocturne = new Champion("Nocturne", false, false, true, false, false, false, false, false, true, false, false, [""], "icons\\icon (86).png");
 const Nunu_Willump = new Champion("Nunu & Willump", true, false, false, false, false, true, false, false, false, false, false, ["freljord"], "icons\\icon (87).png");
 const Olaf = new Champion("Olaf", false, false, false, false, false, false, false, true, false, false, false, ["freljord"], "icons\\icon (88).png");
