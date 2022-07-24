@@ -232,12 +232,12 @@ function videoToggle() {
     var bg = document.getElementById('background');
     var btn = document.getElementById('videoToggle');
     if (videoToggleBoolean) {
-        bg.style.display="block";
+        bg.style.display="none";
         btn.style.background="";
     }
     else {
-        bg.style.display="none";
-        btn.style.background="rgba(255, 255, 255, 0.1)";
+        bg.style.display="block";
+        btn.style.background="none";
     }
     videoToggleBoolean = !videoToggleBoolean;
 }

@@ -103,6 +103,7 @@ html {
 }
 
 #background {
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -119,6 +120,7 @@ html {
 	min-height: 100%;
 	max-width: 100%;
 	max-height: 100%;
+	filter: brightness(115%);
 }
 
 .dropdown:hover {
@@ -229,9 +231,6 @@ html {
 	animation-timing-function: ease-in;
 	box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.03), 3px 3px 5px rgba(0, 0, 0, 0.12);
 	background-color: rgba(255, 255, 255, 0.1);
-	transform: translateY(-2px);
-	transition-duration: 0.2s;
-	transition-timing-function: ease-in;
 	color: rgba(0, 0, 0, 0.8);
 }
 
@@ -365,6 +364,7 @@ html {
 }
 
 #videoToggle {
+	background: rgba(255, 255, 255, 0.1);
 	position: absolute;
 	height: 40px;
 	width: 30px;
